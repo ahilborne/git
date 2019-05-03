@@ -1,0 +1,17 @@
+#! /bin/bash --
+
+# aliases
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
+
+# Personalise
+git config --global user.name "Andrew Hilborne"
+
+defemail='andrew@hilborne.com'
+read -p "email [default: andrew@hilborne.com]: " email
+if [ -z "$email" ]; then
+   email="$defemail"
+fi
+git config --global user.email "$email"
